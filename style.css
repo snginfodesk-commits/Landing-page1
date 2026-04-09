@@ -655,24 +655,75 @@ img { max-width: 100%; height: auto; display: block; }
 
 .testimonial-card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 18px 18px 4px 18px;
   padding: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-align: right;
-  border: 1px solid #f0f0f0;
-  border-right: 4px solid #e8b930;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #e8b930, #d4a020);
+  border-radius: 0 18px 0 0;
 }
 
 .testimonial-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+.testimonial-card .chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.testimonial-card .chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2744, #243456);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8b930;
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.testimonial-card .chat-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2744;
+}
+
+.testimonial-card .chat-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e8b930;
+  background: #fdf8e8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
 .testimonial-card .stars {
   color: #e8b930;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 12px;
   letter-spacing: 2px;
 }
@@ -680,16 +731,34 @@ img { max-width: 100%; height: auto; display: block; }
 .testimonial-card p {
   font-size: 15px;
   color: #444;
-  line-height: 1.7;
-  margin-bottom: 12px;
-  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 0;
 }
 
-.testimonial-card .author {
-  font-size: 14px;
-  font-weight: 700;
+.testimonial-card .highlight-quote {
   color: #1a2744;
-  font-style: normal;
+  font-weight: 700;
+}
+
+.testimonial-card .read-more {
+  display: inline-block;
+  margin-top: 8px;
+  color: #e8b930;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+}
+
+.testimonial-card .expandable {
+  display: none;
+}
+
+.testimonial-card .expandable.show {
+  display: inline;
 }
 
 /* ===== Final CTA Section ===== */

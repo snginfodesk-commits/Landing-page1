@@ -346,6 +346,11 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 2px 8px rgba(76,175,80,0.3);
 }
 
+.check-card .check-circle.x-circle {
+  background: #e74c3c;
+  box-shadow: 0 2px 8px rgba(231,76,60,0.3);
+}
+
 .check-card .check-circle svg {
   width: 20px;
   height: 20px;

@@ -15,9 +15,15 @@
   <!-- ===== Hero Section ===== -->
   <section class="hero">
     <div class="container">
+
       <div class="logo">
-        <!-- Replace with your actual logo: <img src="images/logo.png" alt="צמד ברזל - יזמות ונדלן"> -->
+        <!-- Replace with your actual logo: <img src="images/logo.png" alt="צמד ברזל"> -->
         <img src="images/logo.svg" alt="צמד ברזל - יזמות ונדלן">
+      </div>
+
+      <div class="badge-bar">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        שקיפות, מקצוענות, רווחיות
       </div>
 
       <div class="social-proof-bar">
@@ -31,20 +37,12 @@
         <strong>בלי שאתה אפילו יודע</strong> ואיך להימנע מזה
       </p>
 
-      <!-- YouTube Video Embed - Replace VIDEO_ID with actual YouTube video ID -->
+      <!-- YouTube Video Embed -->
       <div class="video-wrapper">
         <div class="video-placeholder">
-          <!-- Replace this div with the iframe below when you have the YouTube link -->
+          <!-- Replace with iframe: <iframe src="https://www.youtube.com/embed/VIDEO_ID" ...></iframe> -->
           סרטון יעלה כאן בקרוב
         </div>
-        <!--
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="צמד ברזל - הצד האפל של הנדלן הישראלי"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        -->
       </div>
 
       <a href="#lead-form" class="cta-btn">אני רוצה שתחזרו אלי לשיחת אפיון</a>
@@ -56,17 +54,24 @@
     <div class="container">
       <div class="form-card">
         <h2>לאן לשלוח את הפרטים?</h2>
-        <p class="form-subtitle"><span class="pointer">&#x1F447;</span> השאירו פרטים ונחזור אליכם לשיחת אפיון</p>
+        <p class="form-subtitle">השאירו פרטים ונחזור אליכם לשיחת אפיון</p>
 
         <form action="#" method="POST">
           <div class="form-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <input type="text" name="name" placeholder="איך קוראים לך?" required>
           </div>
           <div class="form-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <input type="tel" name="phone" placeholder="מספר טלפון" required>
           </div>
           <button type="submit" class="cta-btn">אני רוצה שיחת אפיון ללא עלות</button>
         </form>
+
+        <div class="urgency-badge">
+          <span class="pulse-dot"></span>
+          מוגבל ל-15 משקיעים חדשים בחודש (כדי להבטיח ליווי אישי ומקצועי)
+        </div>
       </div>
     </div>
   </section>
@@ -75,41 +80,42 @@
   <section class="pain-section">
     <div class="container">
       <h2>עבדת וחסכת כסף והיום יש לך<br>מספיק הון לרכישת דירה להשקעה</h2>
+      <div class="gold-divider"></div>
       <p class="section-subtitle">
         אבל… <span class="bold">התחושה שכולם רוצים רק ״לדפוק אותך״ מחלחלת.</span>
       </p>
 
-      <div class="pain-card">
-        <div class="check-item">
-          <span class="check-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-          </span>
-          <span><strong>המתווך</strong> רוצה לסגור עסקה כי הוא מקבל עמלה גבוהה</span>
+      <div class="check-cards">
+        <div class="check-card">
+          <div class="card-text"><strong>המתווך</strong> רוצה לסגור עסקה כי הוא מקבל עמלה גבוהה</div>
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
         </div>
-        <div class="check-item">
-          <span class="check-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-          </span>
-          <span><strong>הבנק</strong> רוצה ריבית גבוהה</span>
+        <div class="check-card">
+          <div class="card-text"><strong>הבנק</strong> רוצה ריבית גבוהה</div>
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
         </div>
-        <div class="check-item">
-          <span class="check-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-          </span>
-          <span><strong>המוכר</strong> רק רוצה למכור את הנכס במחיר כמה שיותר גבוה</span>
+        <div class="check-card">
+          <div class="card-text"><strong>המוכר</strong> רק רוצה למכור את הנכס במחיר כמה שיותר גבוה</div>
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
         </div>
-        <div class="check-item">
-          <span class="check-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-          </span>
-          <span>אתה מרגיש <strong>לבד במערכה</strong>, בלי אף אחד שבאמת דואג לאינטרס שלך</span>
+        <div class="check-card">
+          <div class="card-text">אתה מרגיש <strong>לבד במערכה</strong>, בלי אף אחד שבאמת דואג לאינטרס שלך</div>
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
         </div>
       </div>
 
-      <p class="section-subtitle" style="margin-top: 24px;">
+      <div class="fear-text">
         <span class="bold">הפחד הכי גדול</span> הוא לגלות שלא קנית את מה שסיפרו לך,
         שיצאת פראייר, השאירו אותך עם כמה בלוק בטון ומלא בעיות.
-      </p>
+      </div>
 
       <a href="#lead-form" class="cta-btn">אני רוצה שיחת אפיון ללא עלות</a>
     </div>
@@ -118,7 +124,8 @@
   <!-- ===== Solution Section ===== -->
   <section class="solution-section">
     <div class="container">
-      <h2>בדיוק בגלל זה הקמנו את<br><span style="color: #d4a843;">צמד ברזל</span></h2>
+      <h2>בדיוק בגלל זה הקמנו את<br><span class="gold-text">צמד ברזל</span></h2>
+      <div class="gold-divider"></div>
 
       <p>
         אנחנו <strong>הצמד ברזל</strong> שלך לאורך כל הדרך
@@ -133,16 +140,85 @@
         </p>
       </div>
 
-      <p>
-        ועשינו את זה כבר <strong>לעשרות מהלקוחות שלנו</strong> וכמובן שגם על עצמינו.
-      </p>
-      <p>
-        ממש כמו בצבא, אנחנו ה׳צמד ברזל׳ שלכם שנשאר לצידכם תמיד,
-        מוודא שאף אחד לא עובד עליכם ושאתם קונים את <strong>העסקה הכי רווחית וטובה</strong> עבורכם.
-      </p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>עשינו את זה כבר <strong>לעשרות מהלקוחות שלנו</strong> וכמובן שגם על עצמינו</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>ממש כמו בצבא, אנחנו ה׳צמד ברזל׳ שלכם <strong>שנשאר לצידכם תמיד</strong></span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <span>מוודא שאף אחד לא עובד עליכם ושאתם קונים את <strong>העסקה הכי רווחית</strong></span>
+        </div>
+      </div>
 
       <div style="margin-top: 32px;">
         <a href="#lead-form" class="cta-btn">אני רוצה שתחזרו אלי לשיחת אפיון</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services Section (ironteam style) ===== -->
+  <section class="services-section">
+    <div class="container">
+      <h2>מה אתם מקבלים?</h2>
+      <div class="gold-divider"></div>
+
+      <div class="service-cards">
+        <!-- Dark Card -->
+        <div class="service-card dark">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>ליווי לקניית דירה</h3>
+          <p>ניתוח שוק מעמיק, איתור נכס מתחת למחיר השוק, ייעוץ מימון ומשפטי</p>
+          <ul class="service-features">
+            <li>
+              <svg class="li-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              מעטפת מלאה: איתור נכס, חקר שוק, מימון
+            </li>
+            <li>
+              <svg class="li-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              אפיון פיננסי מותאם אישית ומדויק
+            </li>
+            <li>
+              <svg class="li-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              בניית תוכנית עסקית הכוללת הערכת סיכונים
+            </li>
+          </ul>
+        </div>
+
+        <!-- Light Card -->
+        <div class="service-card light">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>ליווי קבוצות רוכשים</h3>
+          <p>רכישה קבוצתית בהנחה משמעותית עם ליווי מקצועי לכל שלב</p>
+          <ul class="service-features">
+            <li>
+              <svg class="li-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              ניצול ״יתרון הגודל״ להנחות משמעותיות
+            </li>
+            <li>
+              <svg class="li-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              מו״מ ממוקד ישירות מול יזמים וקבלנים
+            </li>
+            <li>
+              <svg class="li-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              גישה בלעדית להצעות בשלב הפרי-סייל
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -151,15 +227,16 @@
   <section class="about-section">
     <div class="container">
       <h2>מי אנחנו</h2>
+      <div class="gold-divider"></div>
 
       <div class="about-cards">
-        <!-- Amit Gold -->
         <div class="about-card">
           <div class="photo-placeholder">
             <!-- Replace with: <img src="images/amit.jpg" alt="עמית גולד"> -->
             ע
           </div>
           <h3>עמית גולד</h3>
+          <p class="role">יזם נדל"ן | קצין חיל האוויר בעברו</p>
           <p>
             יזם נדל"ן עם ניסיון עשיר, הכשרה מקצועית, ותשוקה אמיתית לתחום.
             לאורך 5 שנים עבר מגוון קורסים והכשרות בתחום ההשקעות, יזמות נדל"ן,
@@ -167,28 +244,27 @@
           </p>
           <p style="margin-top: 12px;">
             עמית מביא איתו לא רק ידע, אלא גם מחויבות עמוקה להצלחת הלקוחות -
-            מתוך ניסיון אישי בשטח. בעברו שירת <strong>כקצין בחיל האוויר</strong> -
-            ערכים של אחריות, מקצועיות ומנהיגות שמלווים אותו גם בעולם העסקים.
+            מתוך ניסיון אישי בשטח. ערכים של <strong>אחריות, מקצועיות ומנהיגות</strong>
+            שמלווים אותו גם בעולם העסקים.
           </p>
         </div>
 
-        <!-- Noam Sedan -->
         <div class="about-card">
           <div class="photo-placeholder">
             <!-- Replace with: <img src="images/noam.jpg" alt="נועם סדן"> -->
             נ
           </div>
           <h3>נועם סדן</h3>
+          <p class="role">מומחה השקעות נדל"ן | קצין לוחם בעברו</p>
           <p>
             מומחה להשקעות נדל"ן וניתוח עסקאות. בעל הבנה עמוקה של השוק
-            וראייה אסטרטגית. הוא בעל הכשרה מקצועית רחבה בתחום, עבר קורסים
-            מעשיים וייעודיים, והוביל תהליכים של ליווי אישי וקבוצתי לעשרות רוכשים.
+            וראייה אסטרטגית. עבר קורסים מעשיים וייעודיים, והוביל תהליכים
+            של ליווי אישי וקבוצתי לעשרות רוכשים.
           </p>
           <p style="margin-top: 12px;">
             נועם שם דגש על שקיפות, ביטחון ובחירה נבונה - מתוך מטרה לאפשר לכל
             משקיע ליהנות מהזדמנויות אמיתיות לצמיחה כלכלית.
-            בעל רקע צבאי <strong>כקצין לוחם</strong> - משמעת, ערכיות ונחישות
-            שמלווים אותו גם בעשייה היומיומית.
+            <strong>משמעת, ערכיות ונחישות</strong> שמלווים אותו גם בעשייה היומיומית.
           </p>
         </div>
       </div>
@@ -199,12 +275,12 @@
   <section class="testimonials-section">
     <div class="container">
       <h2>עשרות לקוחות שעשו אצלינו<br>את עסקת חייהם ממליצים</h2>
+      <div class="gold-divider"></div>
       <p class="section-subtitle">וזה יכול להיות גם אתה</p>
 
-      <!-- Testimonial placeholders - replace with real testimonials -->
       <div class="testimonial-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>״ההמלצה הלקוחות תופיע כאן - ניתן להחליף עם המלצות אמיתיות״</p>
+        <p>״המלצה של לקוח תופיע כאן - ניתן להחליף עם המלצות אמיתיות״</p>
         <span class="author">- שם הלקוח</span>
       </div>
 
@@ -235,13 +311,19 @@
       <div class="form-card" style="text-align: center;">
         <form action="#" method="POST">
           <div class="form-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <input type="text" name="name" placeholder="איך קוראים לך?" required>
           </div>
           <div class="form-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <input type="tel" name="phone" placeholder="מספר טלפון" required>
           </div>
           <button type="submit" class="cta-btn">אני רוצה שיחת אפיון ללא עלות</button>
         </form>
+        <div class="urgency-badge">
+          <span class="pulse-dot"></span>
+          מוגבל ל-15 משקיעים חדשים בחודש
+        </div>
       </div>
     </div>
   </section>
@@ -252,6 +334,12 @@
       <p>צמד ברזל &copy; כל הזכויות שמורות 2025</p>
     </div>
   </footer>
+
+  <!-- ===== WhatsApp Floating Button ===== -->
+  <!-- Replace PHONE_NUMBER with actual WhatsApp number (e.g., 972501234567) -->
+  <a href="https://wa.me/972501234567?text=היי, אשמח לשמוע פרטים על ליווי השקעות נדלן" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
 </body>
 </html>

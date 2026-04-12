@@ -1,18 +1,26 @@
 /* ===== Page 2 Specific Styles ===== */
 /* Base styles (reset, fonts, container, buttons, etc.) come from style.css */
 
+/* ===== Top-right Logo Badge ===== */
+.top-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.top-logo img {
+  width: 64px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
 /* ===== Hero Success Modifier ===== */
 .hero-success {
-  padding: 32px 0 48px;
-}
-
-.hero-success .logo {
-  margin-bottom: 16px;
-}
-
-.hero-success .logo img {
-  max-width: 110px;
-  margin: 0 auto;
+  padding: 60px 0 48px;
+  position: relative;
 }
 
 .hero-success h1 {
@@ -550,11 +558,15 @@
 @media (min-width: 768px) {
   .hero-success h1 { font-size: 46px; }
   .questionnaire-form { padding: 44px 40px 36px; }
+  .top-logo img { width: 72px; }
+  .top-logo { top: 24px; right: 28px; }
 }
 
 @media (max-width: 480px) {
   .hero-success h1 { font-size: 28px; }
-  .hero-success .logo img { max-width: 90px; }
+  .top-logo { top: 14px; right: 14px; }
+  .top-logo img { width: 52px; }
+  .hero-success { padding: 56px 0 44px; }
   .success-icon {
     width: 72px;
     height: 72px;

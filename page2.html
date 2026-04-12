@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צמד ברזל | נרשמת בהצלחה</title>
+  <meta name="description" content="צמד ברזל - תודה על ההרשמה! מלא שאלון קצר והצטרף לקהילה שלנו.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- ===== Hero / Success Section ===== -->
+  <section class="hero hero-success">
+    <div class="container">
+
+      <div class="logo">
+        <img src="images/logo.svg" alt="צמד ברזל">
+      </div>
+
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+
+      <h1>נרשמת <span class="highlight">בהצלחה!</span></h1>
+
+      <p class="subtitle">
+        עכשיו, יש <strong>2 דברים</strong> שכדאי מאוד לעשות:
+      </p>
+
+      <div class="action-cards">
+        <a href="#questionnaire" class="action-card">
+          <span class="action-number">1</span>
+          <div class="action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div class="action-text">
+            לענות על <strong>השאלון</strong> שיעזור לנו למקד את שיחת האפיון ולהפיק ממנה את המיטב
+          </div>
+          <span class="action-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </span>
+        </a>
+        <a href="#community" class="action-card">
+          <span class="action-number">2</span>
+          <div class="action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="action-text">
+            להצטרף <strong>לקהילה שלנו</strong>
+          </div>
+          <span class="action-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Questionnaire Section ===== -->
+  <section class="questionnaire-section" id="questionnaire">
+    <div class="container">
+      <h2>השאלון</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">4 שאלות קצרות שיעזרו לנו להכיר אותך לעומק</p>
+
+      <div class="progress-tracker">
+        <div class="progress-text">
+          <span id="progressCount">0</span> מתוך 4 שאלות נענו
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <form class="questionnaire-form" id="questionnaireForm">
+
+        <!-- שאלה 1 -->
+        <div class="question-group" data-question="1">
+          <div class="question-title">
+            <span class="question-number">1</span>
+            מה המטרה העיקרית שלכם בהשקעה הנוכחית?
+          </div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q1" value="cash_flow" required>
+              <span class="custom-radio"></span>
+              <span class="option-text">יצירת תזרים מזומנים חודשי (שכירות גבוהה).</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q1" value="capital_gain">
+              <span class="custom-radio"></span>
+              <span class="option-text">רווח הון משמעותי במכירה (קנייה מתחת למחיר שוק/השבחה).</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q1" value="safe_parking">
+              <span class="custom-radio"></span>
+              <span class="option-text">״חניית״ הכסף בנכס בטוח ויציב לטווח ארוך.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q1" value="not_sure">
+              <span class="custom-radio"></span>
+              <span class="option-text">עדיין לא סגור/ה, מחפש/ת הכוונה מקצועית.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- שאלה 2 -->
+        <div class="question-group" data-question="2">
+          <div class="question-title">
+            <span class="question-number">2</span>
+            מהו ההון העצמי הפנוי שעומד לרשותכם כרגע?
+          </div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q2" value="250k_500k" required>
+              <span class="custom-radio"></span>
+              <span class="option-text">250,000 - 500,000 ₪.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2" value="500k_800k">
+              <span class="custom-radio"></span>
+              <span class="option-text">500,000 - 800,000 ₪.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2" value="800k_1200k">
+              <span class="custom-radio"></span>
+              <span class="option-text">800,000 - 1,200,000 ₪.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q2" value="over_1200k">
+              <span class="custom-radio"></span>
+              <span class="option-text">מעל 1.2 מיליון ₪.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- שאלה 3 -->
+        <div class="question-group" data-question="3">
+          <div class="question-title">
+            <span class="question-number">3</span>
+            מה החשש הכי גדול שלך כשאת/ה חושב/ת על רכישת דירה להשקעה?
+          </div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q3" value="bad_deal" required>
+              <span class="custom-radio"></span>
+              <span class="option-text">ליפול על עסקה גרועה או ״חתול בשק״.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q3" value="false_promises">
+              <span class="custom-radio"></span>
+              <span class="option-text">שהמספרים והתשואה שהבטיחו לי לא יתממשו במציאות.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q3" value="bureaucracy">
+              <span class="custom-radio"></span>
+              <span class="option-text">להסתבך עם בירוקרטיה, שיפוצים או דיירים בעייתיים.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q3" value="getting_scammed">
+              <span class="custom-radio"></span>
+              <span class="option-text">שמישהו ״יגזור עליי קופון״ בדרך בלי שאדע.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- שאלה 4 -->
+        <div class="question-group" data-question="4">
+          <div class="question-title">
+            <span class="question-number">4</span>
+            מתי היית רוצה לראות את הנכס הראשון רשום על שמך?
+          </div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q4" value="asap" required>
+              <span class="custom-radio"></span>
+              <span class="option-text">אתמול! אני מוכן/ה לצאת לדרך ברגע שנמצא עסקה טובה.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q4" value="few_months">
+              <span class="custom-radio"></span>
+              <span class="option-text">בחודשים הקרובים, אני בשלב איסוף המידע הסופי.</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q4" value="next_year">
+              <span class="custom-radio"></span>
+              <span class="option-text">אין לחץ, אני בודק/ת אופציות לשנה הקרובה.</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="cta-btn">שלח שאלון</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Community Section ===== -->
+  <section class="community-section" id="community">
+    <div class="container">
+      <h2>להצטרף לקהילה שלנו</h2>
+      <div class="gold-divider"></div>
+
+      <h3>מה מיוחד בקהילה שלנו?</h3>
+
+      <div class="community-highlight">
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>עדכונים שוטפים אחר מצב שוק הנדל״ן בישראל</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>עסקאות מציאה מתחת לרדאר</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>פרסום וובינרים והרצאות</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>תוכן מקצועי בחינם לגמרי</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="cta-btn" target="_blank" rel="noopener">לחץ כאן להצטרפות</a>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials Section ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>הם כבר עשו את זה!<br>ומה איתכם?</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">ממליצים</p>
+
+      <div class="wa-chat-window">
+        <!-- WhatsApp top bar -->
+        <div class="wa-topbar">
+          <div class="wa-topbar-avatar">&#128101;</div>
+          <div class="wa-topbar-info">
+            <div class="wa-topbar-name">לקוחות צמד ברזל</div>
+            <div class="wa-topbar-status">4 participants</div>
+          </div>
+        </div>
+
+        <div class="wa-date-pill"><span>היום</span></div>
+
+        <!-- הודעה 1 -->
+        <div class="wa-bubble wa-tail">
+          <span class="wa-sender color-1">חבר מהמילואים</span>
+          <p class="wa-text">את נעם אני מכיר הרבה שנים, לילה אחד מ-300 הלילות שעשינו יחד במילואים סיפר לי על העסק שלו ״צמד ברזל״. התקשרתי לנעם ואמרתי לו שאני שוקל להתחיל תהליך. יומיים אחרי היה לי פגישה עם עמית ונעם - <strong>שסיימתי את השיחה נפל לי אסימון וידעתי שאני הולך איתם יד ביד</strong> לעבר השקעת הנדל"ן הראשונה שלנו.<span class="wa-expandable" id="exp1"> במהלך הליווי יצא לי להכיר לעומק צמד אנשים מקצועיים וקשובים שתוך כדי גם מלמדים, עוזרים, ומפקסים שצריך. היום 4 חודשים לתהליך, אשתי ואני חתמנו בשעה טובה על הדירה הראשונה שלנו - הרבה בזכות הביטחון שקיבלנו מהעבודה המשותפת עם נעם ועמית. תודה ״צמד ברזל״ על הרעב, התשוקה והסבלנות שלכם!</span> <button class="wa-read-more" onclick="document.getElementById('exp1').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
+          <span class="wa-meta"><span class="wa-time">22:46</span> <span class="wa-checks">&#10003;&#10003;</span></span>
+        </div>
+
+        <div class="wa-spacer"></div>
+
+        <!-- הודעה 2 -->
+        <div class="wa-bubble wa-tail">
+          <span class="wa-sender color-2">משקיע מרוצה</span>
+          <p class="wa-text">לאורך כל תהליך ההשקעה ורכישת הדירה, <strong>זכיתי לליווי צמוד של עמית ונועם - ליווי שעשה את כל ההבדל.</strong> כבר בתחילת הדרך בנינו יחד תוכנית עסקית מקיפה, שהתחשבה בכל הפרמטרים הרלוונטיים.<span class="wa-expandable" id="exp2"> בעוד שאני נטיתי למינוף גבוה יותר, עמית ונועם ידעו לעצור אותי בזמן ולהציע גישה שקולה וזהירה יותר. במבט לאחור - זו הייתה ההחלטה הנכונה! כיום שכר הדירה מכסה את המשכנתא, הצלחתי לרכוש נכס ולהתייצב כלכלית. הם דאגו לכל אנשי המקצוע הרלוונטיים, תיאמו פגישות, נכחו בעצמם, ניהלו שיחות מול כל הגורמים - הכל כדי לפשט את התהליך ולחסוך לי זמן, אנרגיה והתעסקות. תודה ענקית על הכל - לא מובן מאליו!!</span> <button class="wa-read-more" onclick="document.getElementById('exp2').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
+          <span class="wa-meta"><span class="wa-time">10:37</span> <span class="wa-checks">&#10003;&#10003;</span></span>
+        </div>
+
+        <div class="wa-spacer"></div>
+
+        <!-- הודעה 3 -->
+        <div class="wa-bubble wa-tail">
+          <span class="wa-sender color-3">זוג משקיעים</span>
+          <p class="wa-text">סדן ועמית התותחים!!!!! זה אמנם הצעד הראשון בדרך שלנו אבל זה הצעד הכיייי מרגש. <strong>תודה שפתחתם לנו דלת לעולם המדהים הזה, בלעדיכם הכל היה נראה מפחיד ומאיים</strong> ובטוח שלא היינו מגיעים לעסקה כזו ולתכנון של שנים קדימה!! אתם בונים לנו את העתיד וזה מטורף. וחוץ מזה - אני לומדת המון וזה היה לא פחות חשוב מהתוצאה עצמה. מקווה שיש לנו עוד דרך ארוכה יחד והרבה עסקאות לצבור!</p>
+          <span class="wa-meta"><span class="wa-time">19:11</span> <span class="wa-checks">&#10003;&#10003;</span></span>
+        </div>
+
+        <div class="wa-spacer"></div>
+
+        <!-- הודעה 4 -->
+        <div class="wa-bubble wa-tail">
+          <span class="wa-sender color-4">נתנאל</span>
+          <p class="wa-text">התחלתי את תוכנית הליווי שלכם לפני חודש וחצי והיום אני לקראת סגירה של עסקה מצוינת! <strong>באמת הצלחתם לקחת אותי מחוסר הבנה מוחלט בנושא הנדל"ן לשליטה ברמה גבוהה מאוד בכל התהליך.</strong><span class="wa-expandable" id="exp4"> אתם, שניכם תותחים, זמינים לכל שאלה, חשש ורצון לשתף. מודה לעצמי שלקחתי את ההחלטה להצטרף לתוכנית ואפילו חושב על להתפתח בעצמי יותר בתחום הנדל"ן, אחרי סיום הליווי, בעזרת הכלים שרכשתי מכם. מעריך מאוד!</span> <button class="wa-read-more" onclick="document.getElementById('exp4').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
+          <span class="wa-meta"><span class="wa-time">22:46</span> <span class="wa-checks">&#10003;&#10003;</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>צמד ברזל &copy; כל הזכויות שמורות 2025</p>
+    </div>
+  </footer>
+
+  <!-- ===== WhatsApp Floating Button ===== -->
+  <a href="https://wa.me/972501234567?text=היי, אשמח לשמוע פרטים על ליווי השקעות נדלן" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===== Success Modal ===== -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>תודה רבה!</h3>
+      <p>הצוות שלנו יעבור על השאלון ויתאם איתך פגישת אפיון</p>
+    </div>
+  </div>
+
+  <!-- ===== Inline JavaScript ===== -->
+  <script>
+    var form = document.getElementById('questionnaireForm');
+    var progressCount = document.getElementById('progressCount');
+    var progressFill = document.getElementById('progressFill');
+    var totalQuestions = 4;
+
+    function updateProgress() {
+      var answered = 0;
+      for (var i = 1; i <= totalQuestions; i++) {
+        if (document.querySelector('input[name="q' + i + '"]:checked')) {
+          answered++;
+        }
+      }
+      progressCount.textContent = answered;
+      progressFill.style.width = (answered / totalQuestions * 100) + '%';
+      if (answered === totalQuestions) {
+        progressFill.classList.add('complete');
+      } else {
+        progressFill.classList.remove('complete');
+      }
+    }
+
+    // Radio button visual selection
+    document.querySelectorAll('.radio-option').forEach(function(option) {
+      option.addEventListener('click', function() {
+        var siblings = this.closest('.radio-group').querySelectorAll('.radio-option');
+        siblings.forEach(function(s) { s.classList.remove('selected'); });
+        this.classList.add('selected');
+        // Remove error state from the question group
+        var group = this.closest('.question-group');
+        if (group) group.classList.remove('error');
+        updateProgress();
+      });
+    });
+
+    // Form submission - validate then show modal
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var allAnswered = true;
+      var firstMissing = null;
+      for (var i = 1; i <= totalQuestions; i++) {
+        var checked = document.querySelector('input[name="q' + i + '"]:checked');
+        var group = document.querySelector('.question-group[data-question="' + i + '"]');
+        if (!checked) {
+          allAnswered = false;
+          if (group) group.classList.add('error');
+          if (!firstMissing) firstMissing = group;
+        }
+      }
+      if (!allAnswered) {
+        if (firstMissing) {
+          firstMissing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+      document.getElementById('successModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal
+    function closeModal() {
+      document.getElementById('successModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on overlay click
+    document.getElementById('successModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>

@@ -179,50 +179,84 @@
       <div class="gold-divider"></div>
       <p class="section-subtitle">וזה יכול להיות גם אתה</p>
 
-      <div class="wa-chat-window">
-        <!-- WhatsApp top bar -->
-        <div class="wa-topbar">
-          <div class="wa-topbar-avatar">&#128101;</div>
-          <div class="wa-topbar-info">
-            <div class="wa-topbar-name">לקוחות צמד ברזל</div>
-            <div class="wa-topbar-status">4 participants</div>
+      <div class="gallery-wrapper">
+        <button class="gallery-nav prev" onclick="document.getElementById('gallery').scrollBy({left: -300, behavior: 'smooth'})" aria-label="הקודם">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gallery-nav next" onclick="document.getElementById('gallery').scrollBy({left: 300, behavior: 'smooth'})" aria-label="הבא">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="gallery-scroll" id="gallery">
+          <!-- תמונה 1: קבוצת לקוחות חוגגים -->
+          <div class="gallery-item">
+            <img src="images/clients/client1.jpg" alt="חתימת עסקה" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="placeholder" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>images/clients/client1.jpg</span>
+            </div>
+            <div class="caption">
+              <span class="caption-tag">חגיגת חתימה</span>
+              <div>לקוחות מרוצים אחרי סגירת עסקה</div>
+            </div>
+          </div>
+
+          <!-- תמונה 2: זוג חותם על חוזה -->
+          <div class="gallery-item">
+            <img src="images/clients/client2.jpg" alt="חתימה על חוזה" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="placeholder" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>images/clients/client2.jpg</span>
+            </div>
+            <div class="caption">
+              <span class="caption-tag">חתימת חוזה</span>
+              <div>בדיקת המסמכים לפני חתימה</div>
+            </div>
+          </div>
+
+          <!-- תמונה 3: זוג בסקירת מסמכים -->
+          <div class="gallery-item">
+            <img src="images/clients/client3.jpg" alt="סקירת מסמכים" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="placeholder" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>images/clients/client3.jpg</span>
+            </div>
+            <div class="caption">
+              <span class="caption-tag">ליווי אישי</span>
+              <div>בדיקה יסודית של כל פרט בעסקה</div>
+            </div>
+          </div>
+
+          <!-- תמונה 4: חגיגה עם עמית -->
+          <div class="gallery-item">
+            <img src="images/clients/client4.jpg" alt="חגיגה עם עמית" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="placeholder" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>images/clients/client4.jpg</span>
+            </div>
+            <div class="caption">
+              <span class="caption-tag">לחיים!</span>
+              <div>עסקה מוצלחת נחגגת כמו שצריך</div>
+            </div>
+          </div>
+
+          <!-- תמונה 5: לקוחה קוראת מסמכים -->
+          <div class="gallery-item">
+            <img src="images/clients/client5.jpg" alt="סקירת חוזה" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="placeholder" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>images/clients/client5.jpg</span>
+            </div>
+            <div class="caption">
+              <span class="caption-tag">שקיפות מלאה</span>
+              <div>לקוחות מבינים כל סעיף בחוזה</div>
+            </div>
           </div>
         </div>
 
-        <div class="wa-date-pill"><span>היום</span></div>
-
-        <!-- הודעה 1 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-1">חבר מהמילואים</span>
-          <p class="wa-text">את נעם אני מכיר הרבה שנים, לילה אחד מ-300 הלילות שעשינו יחד במילואים סיפר לי על העסק שלו ״צמד ברזל״. התקשרתי לנעם ואמרתי לו שאני שוקל להתחיל תהליך. יומיים אחרי היה לי פגישה עם עמית ונעם - <strong>שסיימתי את השיחה נפל לי אסימון וידעתי שאני הולך איתם יד ביד</strong> לעבר השקעת הנדל"ן הראשונה שלנו.<span class="wa-expandable" id="exp1"> במהלך הליווי יצא לי להכיר לעומק צמד אנשים מקצועיים וקשובים שתוך כדי גם מלמדים, עוזרים, ומפקסים שצריך. היום 4 חודשים לתהליך, אשתי ואני חתמנו בשעה טובה על הדירה הראשונה שלנו - הרבה בזכות הביטחון שקיבלנו מהעבודה המשותפת עם נעם ועמית. תודה ״צמד ברזל״ על הרעב, התשוקה והסבלנות שלכם!</span> <button class="wa-read-more" onclick="document.getElementById('exp1').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
-          <span class="wa-meta"><span class="wa-time">22:46</span> <span class="wa-checks">&#10003;&#10003;</span></span>
-        </div>
-
-        <div class="wa-spacer"></div>
-
-        <!-- הודעה 2 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-2">משקיע מרוצה</span>
-          <p class="wa-text">לאורך כל תהליך ההשקעה ורכישת הדירה, <strong>זכיתי לליווי צמוד של עמית ונועם - ליווי שעשה את כל ההבדל.</strong> כבר בתחילת הדרך בנינו יחד תוכנית עסקית מקיפה, שהתחשבה בכל הפרמטרים הרלוונטיים.<span class="wa-expandable" id="exp2"> בעוד שאני נטיתי למינוף גבוה יותר, עמית ונועם ידעו לעצור אותי בזמן ולהציע גישה שקולה וזהירה יותר. במבט לאחור - זו הייתה ההחלטה הנכונה! כיום שכר הדירה מכסה את המשכנתא, הצלחתי לרכוש נכס ולהתייצב כלכלית. הם דאגו לכל אנשי המקצוע הרלוונטיים, תיאמו פגישות, נכחו בעצמם, ניהלו שיחות מול כל הגורמים - הכל כדי לפשט את התהליך ולחסוך לי זמן, אנרגיה והתעסקות. תודה ענקית על הכל - לא מובן מאליו!!</span> <button class="wa-read-more" onclick="document.getElementById('exp2').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
-          <span class="wa-meta"><span class="wa-time">10:37</span> <span class="wa-checks">&#10003;&#10003;</span></span>
-        </div>
-
-        <div class="wa-spacer"></div>
-
-        <!-- הודעה 3 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-3">זוג משקיעים</span>
-          <p class="wa-text">סדן ועמית התותחים!!!!! זה אמנם הצעד הראשון בדרך שלנו אבל זה הצעד הכיייי מרגש. <strong>תודה שפתחתם לנו דלת לעולם המדהים הזה, בלעדיכם הכל היה נראה מפחיד ומאיים</strong> ובטוח שלא היינו מגיעים לעסקה כזו ולתכנון של שנים קדימה!! אתם בונים לנו את העתיד וזה מטורף. וחוץ מזה - אני לומדת המון וזה היה לא פחות חשוב מהתוצאה עצמה. מקווה שיש לנו עוד דרך ארוכה יחד והרבה עסקאות לצבור!</p>
-          <span class="wa-meta"><span class="wa-time">19:11</span> <span class="wa-checks">&#10003;&#10003;</span></span>
-        </div>
-
-        <div class="wa-spacer"></div>
-
-        <!-- הודעה 4 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-4">נתנאל</span>
-          <p class="wa-text">התחלתי את תוכנית הליווי שלכם לפני חודש וחצי והיום אני לקראת סגירה של עסקה מצוינת! <strong>באמת הצלחתם לקחת אותי מחוסר הבנה מוחלט בנושא הנדל"ן לשליטה ברמה גבוהה מאוד בכל התהליך.</strong><span class="wa-expandable" id="exp4"> אתם, שניכם תותחים, זמינים לכל שאלה, חשש ורצון לשתף. מודה לעצמי שלקחתי את ההחלטה להצטרף לתוכנית ואפילו חושב על להתפתח בעצמי יותר בתחום הנדל"ן, אחרי סיום הליווי, בעזרת הכלים שרכשתי מכם. מעריך מאוד!</span> <button class="wa-read-more" onclick="document.getElementById('exp4').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
-          <span class="wa-meta"><span class="wa-time">22:46</span> <span class="wa-checks">&#10003;&#10003;</span></span>
+        <div class="gallery-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          <span>גללו הצידה כדי לראות עוד תמונות</span>
         </div>
       </div>
 

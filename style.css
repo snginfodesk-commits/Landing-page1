@@ -757,29 +757,23 @@ img { max-width: 100%; height: auto; display: block; }
   opacity: 0.7;
 }
 
-/* Caption overlay */
+/* Caption overlay - just stars */
 .gallery-item .caption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(26,39,68,0.95) 0%, rgba(26,39,68,0.75) 60%, transparent 100%);
-  color: #fff;
-  padding: 30px 20px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: right;
+  background: linear-gradient(to top, rgba(26,39,68,0.9) 0%, rgba(26,39,68,0.5) 60%, transparent 100%);
+  padding: 40px 16px 16px;
+  text-align: center;
 }
 
-.gallery-item .caption-tag {
-  display: inline-block;
-  background: #e8b930;
-  color: #1a2744;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 12px;
-  margin-bottom: 6px;
+.gallery-item .caption-stars {
+  color: #e8b930;
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  line-height: 1;
 }
 
 /* Navigation arrows */

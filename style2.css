@@ -1,25 +1,9 @@
 /* ===== Page 2 Specific Styles ===== */
 /* Base styles (reset, fonts, container, buttons, etc.) come from style.css */
 
-/* ===== Top-right Logo Badge ===== */
-.top-logo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.top-logo img {
-  width: 64px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
-}
-
 /* ===== Hero Success Modifier ===== */
 .hero-success {
-  padding: 60px 0 48px;
+  padding: 40px 0 48px;
   position: relative;
 }
 
@@ -546,27 +530,71 @@
   margin-bottom: 0;
 }
 
-/* ===== Testimonials Override ===== */
+/* ===== Testimonials Override - Floating Frame ===== */
+.testimonials-section {
+  background: linear-gradient(180deg, #f5f7fa 0%, #eef2f7 100%);
+  padding: 70px 0 80px;
+}
+
 .testimonials-section .section-subtitle {
   font-size: 18px;
   color: #e8b930;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+.testimonials-section .wa-chat-window {
+  border-radius: 20px;
+  padding: 20px 16px;
+  box-shadow:
+    0 20px 60px rgba(26, 39, 68, 0.18),
+    0 10px 25px rgba(26, 39, 68, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: floatPulse 6s ease-in-out infinite;
+  position: relative;
+}
+
+.testimonials-section .wa-chat-window::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(232,185,48,0.15), rgba(26,39,68,0.1));
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0.7;
+}
+
+.testimonials-section .wa-chat-window:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 28px 70px rgba(26, 39, 68, 0.22),
+    0 14px 35px rgba(26, 39, 68, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+.testimonials-section .wa-chat-window .wa-topbar {
+  border-radius: 20px 20px 0 0;
+  margin: -20px -16px 16px;
+  padding: 14px 18px;
+}
+
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* ===== Responsive - Page 2 ===== */
 @media (min-width: 768px) {
   .hero-success h1 { font-size: 46px; }
   .questionnaire-form { padding: 44px 40px 36px; }
-  .top-logo img { width: 72px; }
-  .top-logo { top: 24px; right: 28px; }
 }
 
 @media (max-width: 480px) {
   .hero-success h1 { font-size: 28px; }
-  .top-logo { top: 14px; right: 14px; }
-  .top-logo img { width: 52px; }
-  .hero-success { padding: 56px 0 44px; }
+  .hero-success { padding: 36px 0 40px; }
   .success-icon {
     width: 72px;
     height: 72px;

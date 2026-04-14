@@ -114,7 +114,7 @@
           <span class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </span>
-          <span>מוודא שאף אחד לא עובד עליכם ושאתם קונים את <strong>העסקה הכי רווחית</strong></span>
+          <span>מוודאים שאף אחד לא עובד עליכם ושאתם קונים את <strong>העסקה הכי רווחית</strong></span>
         </div>
       </div>
 
@@ -133,8 +133,7 @@
       <div class="about-cards">
         <div class="about-card">
           <div class="photo-placeholder">
-            <!-- Replace with: <img src="images/amit.jpg" alt="עמית גולד"> -->
-            ע
+            <img src="images/ec71e0b1-26e6-49be-b110-033a57ef30de.jpeg" alt="עמית גולד">
           </div>
           <h3>עמית גולד</h3>
           <p class="role">יזם נדל"ן | קצין חיל האוויר בעברו</p>
@@ -152,8 +151,7 @@
 
         <div class="about-card">
           <div class="photo-placeholder">
-            <!-- Replace with: <img src="images/noam.jpg" alt="נועם סדן"> -->
-            נ
+            <img src="images/3ade293b-01b8-43df-9c79-62f3f88f83ef.jpeg" alt="נועם סדן">
           </div>
           <h3>נועם סדן</h3>
           <p class="role">מומחה השקעות נדל"ן | קצין לוחם בעברו</p>
@@ -179,50 +177,83 @@
       <div class="gold-divider"></div>
       <p class="section-subtitle">וזה יכול להיות גם אתה</p>
 
-      <div class="wa-chat-window">
-        <!-- WhatsApp top bar -->
-        <div class="wa-topbar">
-          <div class="wa-topbar-avatar">&#128101;</div>
-          <div class="wa-topbar-info">
-            <div class="wa-topbar-name">לקוחות צמד ברזל</div>
-            <div class="wa-topbar-status">4 participants</div>
+      <div class="gallery-wrapper">
+        <button class="gallery-nav prev" onclick="document.getElementById('gallery').scrollBy({left: -300, behavior: 'smooth'})" aria-label="הקודם">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gallery-nav next" onclick="document.getElementById('gallery').scrollBy({left: 300, behavior: 'smooth'})" aria-label="הבא">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="gallery-scroll" id="gallery">
+          <!-- תמונה 1: קבוצה חוגגת -->
+          <div class="gallery-item">
+            <img src="images/clients/da0c0f19-e618-4898-a4ea-24cf2f4c5172.jpeg" alt="חגיגת עסקה">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 2: עמית + לקוחה + שמפניה -->
+          <div class="gallery-item">
+            <img src="images/clients/652f4776-ba4a-40a3-8301-6e1ca029e174.jpeg" alt="לחיים על עסקה מוצלחת">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 3: זוג חותם על חוזה -->
+          <div class="gallery-item">
+            <img src="images/clients/b5ad55f0-599e-474c-a55a-20674a9ee0e5.jpeg" alt="חתימה על חוזה">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 4: זוג בחדר ישיבות -->
+          <div class="gallery-item">
+            <img src="images/clients/038fc446-a94e-4208-a8df-4898ce2d2ce2.jpeg" alt="פגישת עסקה">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 5: זוג מחזיק תוכנית דירה -->
+          <div class="gallery-item">
+            <img src="images/clients/6fac23ea-b9c4-48aa-ad2c-9ef143a29860.jpeg" alt="תכנון דירה">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 6: זוג מבוגר קורא מסמכים -->
+          <div class="gallery-item">
+            <img src="images/clients/251fbd14-6de7-4e2f-ae64-b4c988bd2fa5.jpeg" alt="סקירת מסמכים">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 7: פגישה במסעדה -->
+          <div class="gallery-item">
+            <img src="images/clients/be4f1b21-cfb6-458a-957a-b822e56743a9.jpeg" alt="פגישת עבודה">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+          </div>
+
+          <!-- תמונה 8: לקוחות בנכס החדש -->
+          <div class="gallery-item">
+            <img src="images/clients/e8de8106-6353-4847-8bc3-71471fc51d9f.jpeg" alt="חנוכת נכס">
+            <div class="caption">
+              <div class="caption-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
           </div>
         </div>
 
-        <div class="wa-date-pill"><span>היום</span></div>
-
-        <!-- הודעה 1 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-1">חבר מהמילואים</span>
-          <p class="wa-text">את נעם אני מכיר הרבה שנים, לילה אחד מ-300 הלילות שעשינו יחד במילואים סיפר לי על העסק שלו ״צמד ברזל״. התקשרתי לנעם ואמרתי לו שאני שוקל להתחיל תהליך. יומיים אחרי היה לי פגישה עם עמית ונעם - <strong>שסיימתי את השיחה נפל לי אסימון וידעתי שאני הולך איתם יד ביד</strong> לעבר השקעת הנדל"ן הראשונה שלנו.<span class="wa-expandable" id="exp1"> במהלך הליווי יצא לי להכיר לעומק צמד אנשים מקצועיים וקשובים שתוך כדי גם מלמדים, עוזרים, ומפקסים שצריך. היום 4 חודשים לתהליך, אשתי ואני חתמנו בשעה טובה על הדירה הראשונה שלנו - הרבה בזכות הביטחון שקיבלנו מהעבודה המשותפת עם נעם ועמית. תודה ״צמד ברזל״ על הרעב, התשוקה והסבלנות שלכם!</span> <button class="wa-read-more" onclick="document.getElementById('exp1').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
-          <span class="wa-meta"><span class="wa-time">22:46</span> <span class="wa-checks">&#10003;&#10003;</span></span>
-        </div>
-
-        <div class="wa-spacer"></div>
-
-        <!-- הודעה 2 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-2">משקיע מרוצה</span>
-          <p class="wa-text">לאורך כל תהליך ההשקעה ורכישת הדירה, <strong>זכיתי לליווי צמוד של עמית ונועם - ליווי שעשה את כל ההבדל.</strong> כבר בתחילת הדרך בנינו יחד תוכנית עסקית מקיפה, שהתחשבה בכל הפרמטרים הרלוונטיים.<span class="wa-expandable" id="exp2"> בעוד שאני נטיתי למינוף גבוה יותר, עמית ונועם ידעו לעצור אותי בזמן ולהציע גישה שקולה וזהירה יותר. במבט לאחור - זו הייתה ההחלטה הנכונה! כיום שכר הדירה מכסה את המשכנתא, הצלחתי לרכוש נכס ולהתייצב כלכלית. הם דאגו לכל אנשי המקצוע הרלוונטיים, תיאמו פגישות, נכחו בעצמם, ניהלו שיחות מול כל הגורמים - הכל כדי לפשט את התהליך ולחסוך לי זמן, אנרגיה והתעסקות. תודה ענקית על הכל - לא מובן מאליו!!</span> <button class="wa-read-more" onclick="document.getElementById('exp2').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
-          <span class="wa-meta"><span class="wa-time">10:37</span> <span class="wa-checks">&#10003;&#10003;</span></span>
-        </div>
-
-        <div class="wa-spacer"></div>
-
-        <!-- הודעה 3 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-3">זוג משקיעים</span>
-          <p class="wa-text">סדן ועמית התותחים!!!!! זה אמנם הצעד הראשון בדרך שלנו אבל זה הצעד הכיייי מרגש. <strong>תודה שפתחתם לנו דלת לעולם המדהים הזה, בלעדיכם הכל היה נראה מפחיד ומאיים</strong> ובטוח שלא היינו מגיעים לעסקה כזו ולתכנון של שנים קדימה!! אתם בונים לנו את העתיד וזה מטורף. וחוץ מזה - אני לומדת המון וזה היה לא פחות חשוב מהתוצאה עצמה. מקווה שיש לנו עוד דרך ארוכה יחד והרבה עסקאות לצבור!</p>
-          <span class="wa-meta"><span class="wa-time">19:11</span> <span class="wa-checks">&#10003;&#10003;</span></span>
-        </div>
-
-        <div class="wa-spacer"></div>
-
-        <!-- הודעה 4 -->
-        <div class="wa-bubble wa-tail">
-          <span class="wa-sender color-4">נתנאל</span>
-          <p class="wa-text">התחלתי את תוכנית הליווי שלכם לפני חודש וחצי והיום אני לקראת סגירה של עסקה מצוינת! <strong>באמת הצלחתם לקחת אותי מחוסר הבנה מוחלט בנושא הנדל"ן לשליטה ברמה גבוהה מאוד בכל התהליך.</strong><span class="wa-expandable" id="exp4"> אתם, שניכם תותחים, זמינים לכל שאלה, חשש ורצון לשתף. מודה לעצמי שלקחתי את ההחלטה להצטרף לתוכנית ואפילו חושב על להתפתח בעצמי יותר בתחום הנדל"ן, אחרי סיום הליווי, בעזרת הכלים שרכשתי מכם. מעריך מאוד!</span> <button class="wa-read-more" onclick="document.getElementById('exp4').classList.toggle('show');this.textContent=this.textContent==='קרא עוד'?'פחות':'קרא עוד'">קרא עוד</button></p>
-          <span class="wa-meta"><span class="wa-time">22:46</span> <span class="wa-checks">&#10003;&#10003;</span></span>
+        <div class="gallery-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          <span>גללו הצידה כדי לראות עוד תמונות</span>
         </div>
       </div>
 
@@ -252,7 +283,7 @@
         </form>
         <div class="urgency-badge">
           <span class="pulse-dot"></span>
-          מוגבל ל-15 משקיעים חדשים בחודש
+          מוגבל ל-4 משקיעים בחודש
         </div>
       </div>
     </div>
@@ -264,12 +295,6 @@
       <p>צמד ברזל &copy; כל הזכויות שמורות 2025</p>
     </div>
   </footer>
-
-  <!-- ===== WhatsApp Floating Button ===== -->
-  <!-- Replace PHONE_NUMBER with actual WhatsApp number (e.g., 972501234567) -->
-  <a href="https://wa.me/972501234567?text=היי, אשמח לשמוע פרטים על ליווי השקעות נדלן" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
 
 </body>
 </html>

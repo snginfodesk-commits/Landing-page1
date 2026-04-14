@@ -704,10 +704,16 @@
 }
 
 .lux-name {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 800;
   color: #1a2744;
   line-height: 1.2;
+}
+
+.lux-age {
+  color: #c89814;
+  font-weight: 600;
+  margin-right: 4px;
 }
 
 .lux-role {

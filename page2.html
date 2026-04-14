@@ -186,6 +186,16 @@
         </div>
 
         <button type="submit" class="cta-btn">שלח שאלון</button>
+
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="form-success-text">
+            <strong>השאלון נשלח בהצלחה!</strong>
+            הצוות שלנו יעבור על השאלון ויתאם איתך שיחת התאמה.
+          </div>
+        </div>
       </form>
     </div>
   </section>
@@ -279,7 +289,7 @@
           </p>
           <div class="lux-author">
             <div class="lux-author-info">
-              <div class="lux-name">נתנאל <span class="lux-age">- 25</span></div>
+              <div class="lux-name">ניצן <span class="lux-age">- 28</span></div>
             </div>
           </div>
         </article>
@@ -294,7 +304,7 @@
           </p>
           <div class="lux-author">
             <div class="lux-author-info">
-              <div class="lux-name">ניצן <span class="lux-age">- 28</span></div>
+              <div class="lux-name">נתנאל <span class="lux-age">- 25</span></div>
             </div>
           </div>
         </article>
@@ -309,18 +319,6 @@
       <p>צמד ברזל &copy; כל הזכויות שמורות 2025</p>
     </div>
   </footer>
-
-  <!-- ===== Success Modal ===== -->
-  <div class="modal-overlay" id="successModal">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-      <div class="modal-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      </div>
-      <h3>תודה רבה!</h3>
-      <p>הצוות שלנו יעבור על השאלון ויתאם איתך פגישת אפיון</p>
-    </div>
-  </div>
 
   <!-- ===== Inline JavaScript ===== -->
   <script>
@@ -365,7 +363,7 @@
       });
     });
 
-    // Form submission - validate then show modal
+    // Form submission - validate then show inline success message
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       var allAnswered = true;
@@ -385,24 +383,16 @@
         }
         return;
       }
-      document.getElementById('successModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    // Close modal
-    function closeModal() {
-      document.getElementById('successModal').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    // Close modal on overlay click
-    document.getElementById('successModal').addEventListener('click', function(e) {
-      if (e.target === this) closeModal();
-    });
-
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeModal();
+      // Show inline success message and disable submit button
+      var successEl = document.getElementById('formSuccess');
+      successEl.classList.add('active');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.5';
+        submitBtn.style.cursor = 'not-allowed';
+      }
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   </script>
 

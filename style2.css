@@ -684,31 +684,22 @@
 
 /* Author section */
 .lux-author {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   padding-top: 18px;
   border-top: 1px solid #f0ead8;
+  position: relative;
 }
 
-.lux-avatar {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #1a2744, #243456);
-  color: #e8b930;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: 900;
-  box-shadow: 0 4px 14px rgba(26, 39, 68, 0.25);
-  border: 2px solid #e8b930;
+.lux-author::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, #e8b930, transparent);
 }
 
 .lux-author-info {
-  flex: 1;
   text-align: right;
 }
 

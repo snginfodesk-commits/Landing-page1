@@ -348,8 +348,7 @@
                 }),
               });
               if (!res.ok) throw new Error('HTTP ' + res.status);
-              form.style.display = 'none';
-              successBox.hidden = false;
+            window.location.href = 'page2.html?name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone);
             } catch (err) {
               console.error('Lead submit failed:', err);
               showError('שגיאה בשליחה. נסו שוב בעוד דקה.');

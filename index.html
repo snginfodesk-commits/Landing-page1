@@ -345,31 +345,27 @@
             btn.disabled = true;
             btn.textContent = 'שולח...';
 
-            // Send webhook with keepalive so it survives page navigation
-            var payload = JSON.stringify({
-              name: name,
-              phone: phone,
-              email: email,
-              source: 'קמפיין ראשוני',
-              campaign: 'landing.ironteam.co.il',
-              submittedAt: new Date().toISOString(),
+            // Send webhook, then redirect after it completes (or after timeout)
+            var redirectTimer = setTimeout(function() { window.location.href = 'page2.html'; }, 2000);
+
+            fetch(WEBHOOK_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: name,
+                phone: phone,
+                email: email,
+                source: 'קמפיין ראשוני',
+                campaign: 'landing.ironteam.co.il',
+                submittedAt: new Date().toISOString(),
+              }),
+            }).then(function() {
+              clearTimeout(redirectTimer);
+              window.location.href = 'page2.html';
+            }).catch(function() {
+              clearTimeout(redirectTimer);
+              window.location.href = 'page2.html';
             });
-
-            // Try sendBeacon first (most reliable during navigation), fallback to fetch
-            var sent = false;
-            if (navigator.sendBeacon) {
-              sent = navigator.sendBeacon(WEBHOOK_URL, new Blob([payload], { type: 'application/json' }));
-            }
-            if (!sent) {
-              fetch(WEBHOOK_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: payload,
-                keepalive: true,
-              }).catch(function(err) { console.error('Lead submit failed:', err); });
-            }
-
-            window.location.href = 'page2.html';
           });
         })();
       </script>

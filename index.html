@@ -7,13 +7,14 @@
   <meta name="description" content="צמד ברזל - ליווי אישי להשקעות נדל&quot;ן. 100% באינטרס שלך. שיחת אפיון ללא עלות.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="#lead-form" class="skip-link">דלג לטופס יצירת קשר</a>
 
   <!-- ===== Hero Section ===== -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container">
 
       <h1>ככה גוזרים עליך קופון<br><span class="highlight">בשוק הנדל״ן בישראל!</span></h1>
@@ -36,7 +37,7 @@
   </section>
 
   <!-- ===== Pain Points Section ===== -->
-  <section class="pain-section">
+  <section class="pain-section" id="pain">
     <div class="container">
       <h2>עבדת וחסכת כסף והיום יש לך<br>מספיק הון לרכישת דירה להשקעה</h2>
       <div class="gold-divider"></div>
@@ -79,7 +80,7 @@
   </section>
 
   <!-- ===== Solution Section ===== -->
-  <section class="solution-section">
+  <section class="solution-section" id="solution">
     <div class="container">
       <h2>בדיוק בגלל זה הקמנו את<br><span class="gold-text">צמד ברזל</span></h2>
       <div class="gold-divider"></div>
@@ -118,14 +119,14 @@
         </div>
       </div>
 
-      <div style="margin-top: 32px;">
+      <div class="section-cta-wrapper">
         <a href="#lead-form" class="cta-btn">אני רוצה שתחזרו אלי לשיחת אפיון</a>
       </div>
     </div>
   </section>
 
   <!-- ===== About Us Section ===== -->
-  <section class="about-section">
+  <section class="about-section" id="about">
     <div class="container">
       <h2>מי אנחנו</h2>
       <div class="gold-divider"></div>
@@ -142,7 +143,7 @@
             לאורך 5 שנים עבר מגוון קורסים והכשרות בתחום ההשקעות, יזמות נדל"ן,
             וביצע עשרות עסקאות נדל"ן מוצלחות לעצמו ולמשקיעים.
           </p>
-          <p style="margin-top: 12px;">
+          <p class="about-text-extra">
             עמית מביא איתו לא רק ידע, אלא גם מחויבות עמוקה להצלחת הלקוחות -
             מתוך ניסיון אישי בשטח. ערכים של <strong>אחריות, מקצועיות ומנהיגות</strong>
             שמלווים אותו גם בעולם העסקים.
@@ -160,7 +161,7 @@
             וראייה אסטרטגית. עבר קורסים מעשיים וייעודיים, והוביל תהליכים
             של ליווי אישי וקבוצתי לעשרות רוכשים.
           </p>
-          <p style="margin-top: 12px;">
+          <p class="about-text-extra">
             נועם שם דגש על שקיפות, ביטחון ובחירה נבונה - מתוך מטרה לאפשר לכל
             משקיע ליהנות מהזדמנויות אמיתיות לצמיחה כלכלית.
             <strong>משמעת, ערכיות ונחישות</strong> שמלווים אותו גם בעשייה היומיומית.
@@ -171,7 +172,7 @@
   </section>
 
   <!-- ===== Testimonials Section ===== -->
-  <section class="testimonials-section">
+  <section class="testimonials-section" id="testimonials">
     <div class="container">
       <h2>עשרות לקוחות שעשו אצלינו<br>את עסקת חייהם ממליצים</h2>
       <div class="gold-divider"></div>
@@ -255,9 +256,19 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
           <span>גללו הצידה כדי לראות עוד תמונות</span>
         </div>
+        <div class="gallery-dots" id="galleryDots" aria-hidden="true">
+          <span class="gallery-dot active"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+        </div>
       </div>
 
-      <div style="margin-top: 24px; clear: both;">
+      <div class="section-cta-wrapper">
         <a href="#lead-form" class="cta-btn">אני רוצה גם עסקאות כאלה</a>
       </div>
     </div>
@@ -269,7 +280,7 @@
       <h2>רוצים לעשות את העסקה<br>הכי טובה עבורכם?</h2>
       <p>מלאו את הפרטים ונחזור אליכם לפגישת אפיון ללא עלות</p>
 
-      <div class="form-card" style="text-align: center;">
+      <div class="form-card">
         <form id="leadForm" novalidate>
           <div class="form-group">
             <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -283,12 +294,12 @@
             <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <input type="email" name="email" placeholder="אימייל" required>
           </div>
-          <p id="leadFormError" role="alert" style="color:#dc2626;font-size:14px;margin:8px 0;display:none;"></p>
+          <p id="leadFormError" class="form-error" role="alert"></p>
           <button type="submit" class="cta-btn">אני רוצה שיחת אפיון ללא עלות</button>
         </form>
-        <div id="leadFormSuccess" hidden style="padding:24px;background:#ecfdf5;border:1px solid #10b981;border-radius:12px;color:#065f46;">
-          <h3 style="margin:0 0 8px;font-size:22px;">תודה! קיבלנו את הפרטים 🙌</h3>
-          <p style="margin:0;">נחזור אליך בהקדם לתיאום שיחת אפיון.</p>
+        <div id="leadFormSuccess" hidden>
+          <h3>תודה! קיבלנו את הפרטים 🙌</h3>
+          <p>נחזור אליך בהקדם לתיאום שיחת אפיון.</p>
         </div>
         <div class="urgency-badge">
           <span class="pulse-dot"></span>
@@ -369,5 +380,30 @@
     </div>
   </footer>
 
+<script>
+(function() {
+  var gallery = document.getElementById('gallery');
+  var dots = document.querySelectorAll('.gallery-dot');
+  var hint = document.querySelector('.gallery-hint');
+  if (!gallery || !dots.length) return;
+
+  gallery.addEventListener('scroll', function() {
+    var scrollLeft = gallery.scrollLeft;
+    var scrollWidth = gallery.scrollWidth - gallery.clientWidth;
+    if (scrollWidth <= 0) return;
+    var progress = scrollLeft / scrollWidth;
+    var activeIndex = Math.round(progress * (dots.length - 1));
+
+    dots.forEach(function(dot, i) {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+
+    if (hint && scrollLeft > 20) {
+      hint.style.opacity = '0';
+      hint.style.transition = 'opacity 0.3s ease';
+    }
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>

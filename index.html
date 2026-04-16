@@ -345,27 +345,21 @@
             btn.disabled = true;
             btn.textContent = 'שולח...';
 
-            try {
-              const res = await fetch(WEBHOOK_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  name: name,
-                  phone: phone,
-                  email: email,
-                  source: 'קמפיין ראשוני',
-                  campaign: 'landing.ironteam.co.il',
-                  submittedAt: new Date().toISOString(),
-                }),
-              });
-              if (!res.ok) throw new Error('HTTP ' + res.status);
-              window.location.href = 'page2.html';
-            } catch (err) {
-              console.error('Lead submit failed:', err);
-              showError('שגיאה בשליחה. נסו שוב בעוד דקה.');
-              btn.disabled = false;
-              btn.textContent = originalBtnText;
-            }
+            // Send webhook in background, redirect immediately
+            fetch(WEBHOOK_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: name,
+                phone: phone,
+                email: email,
+                source: 'קמפיין ראשוני',
+                campaign: 'landing.ironteam.co.il',
+                submittedAt: new Date().toISOString(),
+              }),
+            }).catch(function(err) { console.error('Lead submit failed:', err); });
+
+            window.location.href = 'page2.html';
           });
         })();
       </script>

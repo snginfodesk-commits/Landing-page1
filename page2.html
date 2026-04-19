@@ -383,6 +383,46 @@
         }
         return;
       }
+      // Collect answers
+      var answers = {};
+      var labels = {
+        q1: { question: 'מטרת ההשקעה', long_term: 'השקעה לטווח ארוך', capital_gain: 'רווח הון משמעותי במכירה', not_sure: 'מחפש/ת הכוונה מקצועית' },
+        q2: { question: 'הון עצמי פנוי', '250k_500k': '250,000 - 500,000 ₪', '500k_800k': '500,000 - 800,000 ₪', '800k_1200k': '800,000 - 1,200,000 ₪', over_1200k: 'מעל 1.2 מיליון ₪' },
+        q3: { question: 'החשש הגדול', bad_deal: 'ליפול על עסקה גרועה', false_promises: 'שהתשואה לא תתממש', bureaucracy: 'בירוקרטיה ודיירים בעייתיים', getting_scammed: 'שמישהו יגזור עליי קופון' },
+        q4: { question: 'לוח זמנים', asap: 'מוכן/ה לצאת לדרך מיד', few_months: 'בחודשים הקרובים', next_year: 'בודק/ת אופציות לשנה הקרובה' }
+      };
+
+      var noteLines = ['📋 שאלון אפיון:', ''];
+      for (var i = 1; i <= totalQuestions; i++) {
+        var val = document.querySelector('input[name="q' + i + '"]:checked').value;
+        answers['q' + i] = val;
+        var l = labels['q' + i];
+        noteLines.push(i + '. ' + l.question + ': ' + (l[val] || val));
+      }
+
+      // Get lead info from page 1
+      var lead = {};
+      try { lead = JSON.parse(localStorage.getItem('ib_lead') || '{}'); } catch(e) {}
+
+      // Send to N8N webhook
+      var QUESTIONNAIRE_URL = 'https://n8n.srv1270696.hstgr.cloud/webhook/landing-questionnaire';
+      fetch(QUESTIONNAIRE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: lead.name || '',
+          phone: lead.phone || '',
+          email: lead.email || '',
+          q1: answers.q1,
+          q2: answers.q2,
+          q3: answers.q3,
+          q4: answers.q4,
+          notes: noteLines.join('\n'),
+          source: 'שאלון אפיון',
+          submittedAt: new Date().toISOString()
+        })
+      }).catch(function(err) { console.error('Questionnaire submit failed:', err); });
+
       // Show inline success message and disable submit button
       var successEl = document.getElementById('formSuccess');
       successEl.classList.add('active');

@@ -345,6 +345,9 @@
             btn.disabled = true;
             btn.textContent = 'שולח...';
 
+            // Save lead info for page2 questionnaire
+            try { localStorage.setItem('ib_lead', JSON.stringify({ name: name, phone: phone, email: email })); } catch(e) {}
+
             // Send webhook, then redirect after it completes (or after timeout)
             var redirectTimer = setTimeout(function() { window.location.href = 'page2.html'; }, 2000);
 

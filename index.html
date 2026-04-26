@@ -16,7 +16,7 @@
   <section class="hero">
     <div class="container">
 
-      <h1>הצד האפל של הנדל״ן הישראלי<br><span class="highlight">שלא רוצים שתדעו</span></h1>
+      <h1>ככה גוזרים עליך קופון<br><span class="highlight">בשוק הנדל״ן בישראל!</span></h1>
 
       <p class="subtitle">
         בסרטון הקצר הזה אני הולך להראות לך איך בעלי המקצוע גוזרים עליך קופון
@@ -244,7 +244,7 @@
       <p>מלאו את הפרטים ונחזור אליכם לפגישת אפיון ללא עלות</p>
 
       <div class="form-card" style="text-align: center;">
-        <form id="leadForm" action="page2.html" method="GET">
+        <form id="leadForm" novalidate>
           <div class="form-group">
             <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <input type="text" name="name" placeholder="איך קוראים לך?" required>
@@ -253,13 +253,85 @@
             <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <input type="tel" name="phone" placeholder="מספר טלפון" required>
           </div>
+          <div class="form-group">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <input type="email" name="email" placeholder="אימייל" required>
+          </div>
+          <p id="leadFormError" role="alert" style="color:#dc2626;font-size:14px;margin:8px 0;display:none;"></p>
           <button type="submit" class="cta-btn">אני רוצה שיחת אפיון ללא עלות</button>
         </form>
+        <div id="leadFormSuccess" hidden style="padding:24px;background:#ecfdf5;border:1px solid #10b981;border-radius:12px;color:#065f46;">
+          <h3 style="margin:0 0 8px;font-size:22px;">תודה! קיבלנו את הפרטים 🙌</h3>
+          <p style="margin:0;">נחזור אליך בהקדם לתיאום שיחת אפיון.</p>
+        </div>
         <div class="urgency-badge">
           <span class="pulse-dot"></span>
           מוגבל ל-4 משקיעים בחודש
         </div>
       </div>
+
+      <script>
+        (function () {
+          const WEBHOOK_URL = 'https://n8n.srv1270696.hstgr.cloud/webhook/landing-lead';
+          const form = document.getElementById('leadForm');
+          const successBox = document.getElementById('leadFormSuccess');
+          const errorBox = document.getElementById('leadFormError');
+          const btn = form.querySelector('button[type="submit"]');
+          const originalBtnText = btn.textContent;
+
+          function showError(msg) {
+            errorBox.textContent = msg;
+            errorBox.style.display = 'block';
+          }
+          function clearError() {
+            errorBox.textContent = '';
+            errorBox.style.display = 'none';
+          }
+
+          form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            clearError();
+
+            const name = form.name.value.trim();
+            const phoneRaw = form.phone.value.trim();
+            const email = form.email.value.trim();
+
+            if (!name) { showError('נא להזין שם'); return; }
+
+            const cleaned = phoneRaw.replace(/\D/g, '');
+            const phone = cleaned.length === 9 ? '0' + cleaned : cleaned;
+            if (!/^0[5-9]\d{8}$/.test(phone)) {
+              showError('מספר טלפון לא תקין — נא להזין מספר ישראלי');
+              return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = 'שולח...';
+
+            try {
+              const res = await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  name: name,
+                  phone: phone,
+                  email: email,
+                  source: 'קמפיין ראשוני',
+                  campaign: 'landing.ironteam.co.il',
+                  submittedAt: new Date().toISOString(),
+                }),
+              });
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+            window.location.href = 'page2.html?name=' + encodeURIComponent(name) + '&phone=' + encodeURIComponent(phone);
+            } catch (err) {
+              console.error('Lead submit failed:', err);
+              showError('שגיאה בשליחה. נסו שוב בעוד דקה.');
+              btn.disabled = false;
+              btn.textContent = originalBtnText;
+            }
+          });
+        })();
+      </script>
     </div>
   </section>
 
